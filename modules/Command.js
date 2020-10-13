@@ -50,8 +50,14 @@ class Command {
   }
 
   helpMsg() {
-    return `${this.help.name} command usage: \`\`\`${this.help.usage}\`\`\``
+    return `${this.help.name} command usage: \`\`\`${this.help.usage}\`\`\`\nAliases: \`${formatAliases(this.options.aliases)}\``
   }
 }
 
+function formatAliases(aliasArray) {
+  let string = aliasArray.reduce((result, alias) => {
+    return `${result}${alias}, `
+  }, '')
+  return string.substring(0, string.length-2)
+}
 module.exports = Command;
