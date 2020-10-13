@@ -34,13 +34,18 @@ module.exports = config;
 ```
 
 - Install yarn
-`npm i --global yarn`
+
+```
+npm install --global yarn
+```
 
 - You're all set! Proceed to *Running the Application*
 
 ## Running the Application
 
-> yarn start
+```
+yarn start
+```
 
 ## Assigning your bot to a Discord Guild
 - On your bot's application page, go to 'OAuth2' setting
