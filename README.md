@@ -1,11 +1,12 @@
 # RAFA bot
 RAFA: Robô Automatizador e Facilitador de Administração
 
-Bot de Discord que auxilia em tarefas comuns em escritórios corporativos
+Discord bot to give support for common corporate office tasks
 
 ## Requirements
 - `git` command line installed (Downloads [here](https://git-scm.com/downloads))
 - `node` [Version 8.0.0+](https://nodejs.org)
+- `yarn` `npm i --global yarn`
 - A Discord bot application (create one [here](https://discordapp.com/developers/applications/) if you haven't yet)
 - Your bot's Token
 - Any text editor (Recommended: [VSCode](https://code.visualstudio.com/))
@@ -31,11 +32,15 @@ Bot de Discord que auxilia em tarefas comuns em escritórios corporativos
 
 module.exports = config;
 ```
+
+- Install yarn
+`npm i --global yarn`
+
 - You're all set! Proceed to *Running the Application*
 
 ## Running the Application
 
-> node index
+> yarn start
 
 ## Assigning your bot to a Discord Guild
 - On your bot's application page, go to 'OAuth2' setting
