@@ -11,7 +11,7 @@ class Help extends Command {
     let prefix = client.config.prefix
     super(client, {
       name: "Help",
-      description: "Display help messages",
+      description: "Display help messages. Use 'help commandName' for details on a specific command",
       enabled: true,
       usage: `${prefix}help OR ${prefix}help <commandName>`,
       aliases: ["ajuda", "socorro"],
@@ -45,7 +45,7 @@ function helpListAll(client) {
   let string = client.commands.reduce((result, command) => {
     return `${result}\n${command.helpMsgList()}`
   }, `Hi! I'm RAFA, and my prefix on this server is \'${client.config.prefix}\'
-You can type my prefix with one of the following commands for the desired effect:\`\`\``)
+You can type my prefix with one of the following commands (or one of its aliases) for the desired effect:\`\`\``)
   string += `\n\`\`\``
 
   return string
