@@ -44,7 +44,8 @@ class Help extends Command {
 function helpListAll(client) {
   let string = client.commands.reduce((result, command) => {
     return `${result}\n${command.helpMsgList()}`
-  }, `\`\`\``)
+  }, `Hi! I'm RAFA, and my prefix on this server is \'${client.config.prefix}\'
+You can type my prefix with one of the following commands for the desired effect:\`\`\``)
   string += `\n\`\`\``
 
   return string

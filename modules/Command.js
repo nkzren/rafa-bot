@@ -6,7 +6,7 @@
 class Command {
   constructor(client, {
     name = null,
-    description = "No description.",
+    description = "Coming soon...",
     usage = "No usage provided",
     enabled = false,
     aliases = [],
@@ -46,7 +46,7 @@ class Command {
   }
 
   helpMsgList() {
-    return `${this.help.name}: ${this.help.description}`
+    return `${this.name}: ${this.help.description}`
   }
 
   helpMsg() {
