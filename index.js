@@ -107,7 +107,6 @@ client.on("disconnect", () => client.logger.warn("Bot disconnected!"))
   .on("reconnecting", () => client.logger.ready("Bot reconnected!"))
   .on("error", e => client.logger.error(e))
   .on("warn", info => client.logger.warn(info))
-  .on("ready", () => client.user.setActivity("Commands", {type: "LISTENING"}))
 
 /**
  * Loads function commands contained in the ./commands folder.
