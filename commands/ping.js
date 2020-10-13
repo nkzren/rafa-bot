@@ -9,10 +9,10 @@ const Command = require('../modules/Command');
 class Ping extends Command {
   constructor(client) {
     super(client, {
-      name: "ping",
+      name: "Ping",
       description: "Test bot latency. The Hello World! of commands",
       enabled: true,
-      usage: "ping",
+      usage: `${client.config.prefix}ping`,
       aliases: ["pong"],
       permissionLevel: "User",
     });
@@ -20,12 +20,12 @@ class Ping extends Command {
 
   async run(message, args, level) {
     try {
-      this.log();
+      this.log(message);
       const msg = await message.channel.send("Ping!");
       msg.edit(`Pong! (Latency:  ${msg.createdTimestamp - message.createdTimestamp}ms. 💙: ${Math.round(this.client.ping)}ms.)`)
     } catch (e) {
       super.run(message);
-      this.client.logger(e, "error");
+      this.client.logger.error(e);
     }
   }
 }

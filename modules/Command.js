@@ -12,7 +12,7 @@ class Command {
     aliases = [],
     permissionLevel = "User",
   }) {
-    this.name = name;
+    this.name = name.toLowerCase();
     this.client = client;
     this.options = { enabled, aliases, permissionLevel };
     this.help = { name, description, usage };
@@ -36,8 +36,21 @@ class Command {
    *
    * @memberof Command
    */
-  log() {
-    this.client.logger.log(`Running command: ${this.name}`);
+  log(message = null) {
+    let logMsg = `Running command: ${this.name}`
+    if (message) {
+      logMsg += ` from ${message.guild.name} - ${message.guild.id} by User: ${message.author.username} - ${message.author.id}`;
+    }
+
+    this.client.logger.log(logMsg);
+  }
+
+  helpMsgList() {
+    return `${this.help.name}: ${this.help.description}`
+  }
+
+  helpMsg() {
+    return `${this.help.name} command usage: \`\`\`${this.help.usage}\`\`\``
   }
 }
 

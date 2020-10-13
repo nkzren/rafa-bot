@@ -56,9 +56,9 @@ class ProtoBot extends Client {
       props.options.location = commandPath;
 
       // Maps command name and its aliases
-      this.commands.set(props.help.name, props);
+      this.commands.set(props.name, props);
       props.options.aliases.forEach(alias => {
-        this.aliases.set(alias, props.help.name);
+        this.aliases.set(alias, props.name);
       });
       return false;
     } catch (e) {
@@ -106,7 +106,8 @@ init();
 client.on("disconnect", () => client.logger.warn("Bot disconnected!"))
   .on("reconnecting", () => client.logger.ready("Bot reconnected!"))
   .on("error", e => client.logger.error(e))
-  .on("warn", info => client.logger.warn(info));
+  .on("warn", info => client.logger.warn(info))
+  .on("ready", () => client.user.setActivity("Commands", {type: "LISTENING"}))
 
 /**
  * Loads function commands contained in the ./commands folder.
