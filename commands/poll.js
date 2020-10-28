@@ -20,6 +20,7 @@ class Poll extends Command {
 
   async run(message, args, level) {
     try {
+        console.log(message)
     } catch (e) {
       super.run(message)
       this.client.logger.error(e)
@@ -27,17 +28,17 @@ class Poll extends Command {
   }
 
   parseToArgs(message) {
-    let args = msg.content
-      .slice(client.config.prefix.length)
+    let args = message.content
+      .slice(this.client.config.prefix.length)
       .trim()
       .split('"')
       .filter((phrase) => phrase.trim() !== "")
 
     args.map(e => e.trim())
     
-    if (args[0].startsWith("end")) {
+    // if (args[0].startsWith("end")) {
         
-    }
+    // }
   }
 }
 
