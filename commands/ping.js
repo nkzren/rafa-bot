@@ -22,7 +22,7 @@ class Ping extends Command {
     try {
       this.log(message);
       const msg = await message.channel.send("Ping!");
-      msg.edit(`Pong! (Latency:  ${msg.createdTimestamp - message.createdTimestamp}ms. 💙: ${Math.round(this.client.ping)}ms.)`)
+      msg.edit(`Pong! (Latency:  ${msg.createdTimestamp - message.createdTimestamp}ms.)`)
     } catch (e) {
       super.run(message);
       this.client.logger.error(e);
