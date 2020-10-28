@@ -22,9 +22,6 @@ class Meet extends Command {
     try {
       const dt = new Date()
       const channelManager = message.guild.channels
-      if (args.length) {
-        channelNameBase = args.length[0]
-      }
       const newName = "Auto Meet"
       const newCategory = await channelManager.create(newName, {
         type: "category",
