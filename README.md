@@ -11,7 +11,7 @@ Bot de Discord que auxilia em tarefas comuns em escritórios corporativos
 - Any text editor (Recommended: [VSCode](https://code.visualstudio.com/))
 
 ## Getting Started
-> git clone https://gitlab.com/nkzren/rafa-bot.git
+> git clone https://github.com/nkzren/rafa-bot.git
 
 - Create a 'token.json' file in the project's root directory (**DO NOT share the token publicly, it will open your application up to hackers**)
 ```json
