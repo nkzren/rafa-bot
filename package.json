@@ -18,7 +18,7 @@
   },
   "homepage": "https://gitlab.com/nkzren/rafa-bot#readme",
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "chalk": "^2.4.2",
     "discord.js": "^12.4.1",
     "klaw": "^3.0.0",
